@@ -31,6 +31,13 @@ function sendText(){
 	closeKeyboard();
 }
 
+function returnHome(){
+	httpRequest = new XMLHttpRequest();
+	var requestURI = getRemoteAddress() + "/?home=true";
+	httpRequest.open("get", requestURI, true);
+	httpRequest.send();
+}
+
 function openKeyboard(){
 	document.getElementById("keyboardModal").classList.add("is-active");
 }
