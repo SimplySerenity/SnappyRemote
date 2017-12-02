@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snappy Remote</title>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="hero is-fullheight is-info is-bold">
+            <div class="hero-head">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                        Snappy Remote
+                    </h1>
+                    <h3 class="subtitle">
+                        Remote address
+                    </h3>
+                    <input class="input is-primary" type="text" placeholder="192.168.0.11:8080" id="remoteAddress">
+                </div>
+            </div>
+            <div class="hero-body">
+                <div class="container">
+                    <div class="modal has-text-centered" id="keyboardModal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                            <div class="box">
+                                <div class="content">
+                                    <div class="field">
+                                        <label class="label">Send text to Snappy</label>
+                                        <div class="control">
+                                            <input class="input is-info" type="text" placeholder="text to send" id="keyboardInput">
+                                        </div>
+                                    </div>
+                                    <button class="button is-info is-outlined" onclick="sendText()">Send</button>
+                                    <button class="button is-danger is-outlined" onclick="closeKeyboard()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns is-vcentered">
+                        <div class="column has-text-centered">
+                            <button class="button is-success" id="keyboard" onclick="openKeyboard()">
+                                <span class="icon is-small">
+                                    <i class="fa fa-keyboard-o"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="columns is-vcentered">
+                        <div class="column has-text-centered">
+                            <button class="button is-success" id="upCur" onclick="upButton()">
+                				<span class="icon is-small">
+                				    <i class="fa fa-arrow-up"></i>
+                				</span>
+                            </button>
+                            <button class="button is-success" id="downCur" onclick="downButton()">
+                                <span class="icon is-small">
+                                    <i class="fa fa-arrow-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="columns is-vcentered">
+                        <div class="column has-text-centered">
+                            <button class="button is-success" id="select" onclick="enterButton()">
+                                 Enter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="remote.js"></script>
+    </body>
+</html>
