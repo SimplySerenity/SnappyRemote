@@ -7,24 +7,15 @@ function getRemoteAddress(){
 	}
 }
 
-function upButton(){
+function SnappyCommand(command) {
 	httpRequest = new XMLHttpRequest();
-	var requestURI = getRemoteAddress() + "/?up=1";
-	httpRequest.open("get", requestURI, true);
+	httpRequest.open("get", getRemoteAddress() + "/?snappycommand=" + command);
 	httpRequest.send();
 }
 
-function downButton(){
+function OmxCommand(command) {
 	httpRequest = new XMLHttpRequest();
-	var requestURI = getRemoteAddress() + "/?down=1";
-	httpRequest.open("get", requestURI, true);
-	httpRequest.send();
-}
-
-function enterButton(){
-	httpRequest = new XMLHttpRequest();
-	var requestURI = getRemoteAddress() + "/?select=true";
-	httpRequest.open("get", requestURI, true);
+	httpRequest.open("get", getRemoteAddress() + "/?omxcommand=" + command);
 	httpRequest.send();
 }
 
@@ -34,27 +25,6 @@ function sendText(){
 	httpRequest.open("get", requestURI, true);
 	httpRequest.send();
 	closeKeyboard();
-}
-
-function returnHome(){
-	httpRequest = new XMLHttpRequest();
-	var requestURI = getRemoteAddress() + "/?home=true";
-	httpRequest.open("get", requestURI, true);
-	httpRequest.send();
-}
-
-function pause(){
-	httpRequest = new XMLHttpRequest();
-	var requestURI = getRemoteAddress() + "/?omxcommand=pause";
-	httpRequest.open("get", requestURI, true);
-	httpRequest.send();
-}
-
-function stop(){
-	httpRequest = new XMLHttpRequest();
-	var requestURI = getRemoteAddress() + "/?omxcommand=stop";
-	httpRequest.open("get", requestURI, true);
-	httpRequest.send();
 }
 
 function openKeyboard(){
