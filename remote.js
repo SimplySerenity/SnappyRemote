@@ -27,10 +27,6 @@ function sendText(){
 	closeKeyboard();
 }
 
-function openKeyboard(){
-	document.getElementById("keyboardModal").classList.add("is-active");
-}
-
-function closeKeyboard(){
-	document.getElementById("keyboardModal").classList.remove("is-active");
+function toggleKeyboard() {
+	document.getElementById("keyboardModal").classList.toggle("is-active");
 }

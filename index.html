@@ -30,11 +30,11 @@
                                     <div class="field">
                                         <label class="label">Send text to Snappy</label>
                                         <div class="control">
-                                            <input class="input is-info" type="text" placeholder="text to send" id="keyboardInput">
+                                            <input class="input is-info" type="text" placeholder="text to send" id="keyboardInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                                         </div>
                                     </div>
                                     <button class="button is-large is-info is-outlined" onclick="sendText()">Send</button>
-                                    <button class="button is-large is-danger is-outlined" onclick="closeKeyboard()">Cancel</button>
+                                    <button class="button is-large is-danger is-outlined" onclick="toggleKeyboard()">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     <i class="fa fa-home"></i>
                                 </span>
                             </button>
-                            <button class="button is-large is-success" id="keyboard" onclick="openKeyboard()">
+                            <button class="button is-large is-success" id="keyboard" onclick="toggleKeyboard()">
                                 <span class="icon is-small">
                                     <i class="fa fa-keyboard-o"></i>
                                 </span>
