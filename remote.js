@@ -24,7 +24,7 @@ function sendText(){
 	var requestURI = getRemoteAddress() + "/?text=" + document.getElementById("keyboardInput").value;
 	httpRequest.open("get", requestURI, true);
 	httpRequest.send();
-	closeKeyboard();
+	toggleKeyboard();
 }
 
 function toggleKeyboard() {
